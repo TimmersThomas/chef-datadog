@@ -100,7 +100,7 @@ template agent_config_file do # rubocop:disable Metrics/BlockLength
   sensitive true if Chef::Resource.instance_methods(false).include?(:sensitive)
 end
 
-if node['datadog']['agent6']
+if node['datadog']['agent6'] || node['datadog']['generate_datadog_yaml']
   template agent6_config_file do
     def template_vars
       additional_endpoints = {}

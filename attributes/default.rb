@@ -36,6 +36,7 @@ default['datadog']['agent6_package_action'] = 'install'
 # Set to true to allow both agent5 and agent6 package to be installed. If left to default of `false`,
 # the "other" package will be removed explicitly (depending on the value of `node['datadog']['agent6']`)
 default['datadog']['allow_both_packages'] = false
+default['datadog']['generate_datadog_yaml'] = false
 
 # Use this attribute to send data to additional accounts
 # (agent and handler if enabled)

@@ -46,6 +46,15 @@ default['datadog']['extra_endpoints']['prod']['api_key'] = nil
 default['datadog']['extra_endpoints']['prod']['application_key'] = nil
 default['datadog']['extra_endpoints']['prod']['url'] = nil # optional
 
+## Agent6-only settings ##
+
+# Set a key to true to make the agent6 use the v2 api on that endpoint, false otherwise.
+# Leave key value to nil to use agent6 default for that endpoint.
+# Supported keys: "series", "events", "service checks"
+default['datadog']['use_v2_api'] = {}
+
+
+
 # Add this prefix to all Chef tags sent to Datadog: "#{tag_prefix}#{tag}"
 # This makes it easy to group hosts in Datadog by their Chef tags, but might be counterproductive
 # if your Chef tags are already in the "#{tag_group}:#{value}" form.
